@@ -1,0 +1,78 @@
+@import "var";
+
+html, body{
+	height: 100%;
+}
+
+img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.page{
+    -webkit-font-smoothing: antialiased;
+    font: @s-normal/1.35 'MuseoSlab', Arial, sans-serif;
+    font-weight: 300;
+    color: @c-black;
+    background-color: @c-white;
+
+    &__inner{
+    }
+
+    &__footer{
+        height: 100px;
+    }
+}
+
+input, textarea, keygen, select, button {
+    font: @s-middle/30px 'MuseoSlab', Arial, sans-serif;
+}
+
+.container{
+    min-width: 990px;
+    max-width: 1280px;
+    padding: 0 25px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hide{
+    display: none;
+}
+
+a{
+    color: @c-link;
+    text-decoration: none;
+
+    &:hover{
+        color: @c-link-hover;
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+h1, .h1{
+    font-size: 43px;
+}
+
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+    font-size: 18px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    zoom:1; /* Хак для IE 6 и 7 */
+}

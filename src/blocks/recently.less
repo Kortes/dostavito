@@ -1,0 +1,159 @@
+@import "var";
+
+.recently{
+	padding: 60px 0 80px;
+
+	&__title{
+		color: @c-link;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: 25%;
+		padding-right: 30px;
+		box-sizing: border-box;
+	}
+
+	&__link{
+		display: block;
+		color: @c-text;
+		font-weight: 500;
+
+		&:hover{
+			color: @c-text;
+
+			.recently__image:before{
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: fade(@c-link-hover, 30%);
+				border-radius: 5px;
+			}
+
+			.recently__name{
+				color: @c-link-hover;
+			}
+		}
+	}
+
+	&__image{
+		display: block;
+		width: 170px;
+		height: 110px;
+		margin-bottom: 15px;
+		position: relative;
+	}
+
+	&__img{
+		max-height: 110px;
+		border-radius: 5px;
+	}
+
+	&__price{
+		display: inline-block;
+		white-space: nowrap;
+		font-size: @s-middle;
+
+		&:after{
+			content: " ₽";
+			font-family: Arial;
+		}
+	}
+
+	&__name{
+		display: block;
+		color: @c-link;
+		line-height: 20px;
+		height: 40px;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 20px;
+
+		&:before{
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			height: 20px;
+			width: 30px;
+			background: linear-gradient(to right, fade(@c-white, 0), fade(@c-white, 90%) 75%, @c-white);
+		}
+	}
+
+	&__info{
+		display: block;
+		border-bottom: 1px solid fade(@c-border, 20%);
+		padding-bottom: 10px;
+	}
+
+	&__delivery,
+	&__way{
+		display: inline-block;
+		vertical-align: top;
+		white-space: nowrap;
+		box-sizing: border-box;
+		font-size: @s-small;
+		height: 15px;
+		line-height: 15px;
+		padding-left: 28px;
+		background: url(../images/recently.png) no-repeat;
+	}
+
+	&__delivery{
+		background-position: left -14px;
+		padding-right: 25px;
+	}
+
+	&__way{
+		background-position: left -29px;
+	}
+
+	&__bottom{
+		display: block;
+		padding-top: 10px;
+	}
+
+	&__profile{
+		display: inline-block;
+		vertical-align: top;
+		box-sizing: border-box;
+		max-width: 50%;
+		font-weight: 300;
+		position: relative;
+
+		&:first-child{
+			padding-right: 20px;
+
+			&:before{
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 100%;
+				height: 14px;
+				width: 24px;
+				background: url(../images/recently.png) no-repeat center top;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		&:last-child{
+			padding-left: 20px;
+		}
+
+		&-name,
+		&-city{
+			display: block;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		&-city{
+			font-size: @s-small;
+		}
+	}
+}

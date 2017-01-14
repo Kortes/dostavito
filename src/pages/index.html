@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% set title = "Покупки на Авито с доставкой" %}
+
+{% set city = [
+	{"value": "29", "title": "Архангельск"},
+	{"value": "66", "title": "Екатеринбург"},
+	{"value": "77", "title": "Москва"},
+	{"value": "89", "title": "Салехард"},
+	{"value": "11", "title": "Сыктывкар"},
+	{"value": "86", "title": "Ханты-Мансий"}
+]%}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block pageClass %}page_home{% endblock %}
+
+{% block panel %}
+	<div class="panel">
+		<h1 class="panel__title">{{ title }}</h1>
+		<form class="panel__form" action="#" method="get">
+			<div class="panel__line clearfix">
+				<div class="panel__right">
+					<input type="submit" class="btn" name="btn" value="Продолжить" />
+				</div>
+				<div class="panel__fix">
+					<input type="text" name="link" placeholder="Скопируйте сюда ссылку на товар">
+				</div>
+			</div>
+			<div class="panel__city">
+				Город доставки:
+				<select class="select panel__select" name="city">
+					{% for item in city %}
+						<option value="{{ item.value }}">{{ item.title }}</option>
+					{% endfor %}
+				</select>
+			</div>
+		</form>
+	</div>
+{% endblock %}
+
+{% block description %}
+	{% include 'list.html' %}
+{% endblock %}
+
+{% block content %}
+	{% include 'recently.html' %}
+{% endblock %}
+
+{% block script %}
+	<script src="ui/select2/dist/js/select2.min.js"></script>
+{% endblock %}

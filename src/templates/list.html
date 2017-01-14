@@ -1,0 +1,13 @@
+{% set list = [
+	{"type": "calculate", "title": "Расчитайте<br>стоимость доставки"},
+	{"type": "pay", "title": "Оплатите товар<br>и доставку"},
+	{"type": "courier", "title": "Ждите курьера<br>с товаром"}
+]%}
+
+<div class="list">
+	<ul class="list__list">
+		{% for item in list %}
+			<li class="list__item list__item_type_{{ item.type }}">{{ item.title }}</li>
+		{% endfor %}
+	</ul>
+</div>

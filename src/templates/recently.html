@@ -1,0 +1,43 @@
+{% set list = [
+	{"link": "#", "image": "images/recently1.png", "price": "102 000", "title": "Canon 5d mark2 и объективы", "delivery": "230", "way": "3 дня", "fromName": "Ольга", "fromCity": "из Серова",
+	"whomName": "Дмитрий", "whomCity": "в Иманжилинске"},
+	{"link": "#", "image": "images/recently2.png", "price": "2 000", "title": "Детские горные лыжи Volkl с ботинками Nordica", "delivery": "230", "way": "3 дня", "fromName": "Ольга", "fromCity": "из Серова",
+	"whomName": "Дмитрий", "whomCity": "в Иманжилинске"},
+	{"link": "#", "image": "images/recently3.png", "price": "6 300", "title": "Проточный газовый водонагреватель Нева 3212", "delivery": "230", "way": "3 дня", "fromName": "Ольга", "fromCity": "из Серова",
+	"whomName": "Дмитрий", "whomCity": "в Иманжилинске"},
+	{"link": "#", "image": "images/recently4.png", "price": "600", "title": "Толстовка с капюшоном -  Польша, р. 122-128", "delivery": "230", "way": "3 дня", "fromName": "Ольга", "fromCity": "из Серова",
+	"whomName": "Дмитрий", "whomCity": "в Иманжилинске"}
+]%}
+
+<div class="recently">
+	<div class="h1 recently__title">Недавно купили</div>
+	<ul class="recently__list">
+		{% for item in list -%}
+			<li class="recently__item">
+				<a href="{{ item.link }}" class="recently__link">
+					<span class="recently__image">
+						<img class="recently__img" src="{{ item.image }}" />
+					</span>
+					<span class="recently__price">{{ item.price }}</span>
+					<span class="recently__name">{{ item.title }}</span>
+					<span class="recently__info">
+						<span class="recently__delivery">
+							Доставка {{ item.delivery }} Р
+						</span><span class="recently__way">
+							В пути {{ item.way }}
+						</span>
+					</span>
+					<span class="recently__bottom">
+						<span class="recently__profile">
+							<span class="recently__profile-name">{{ item.fromName }}</span>
+							<span class="recently__profile-city">{{ item.fromCity }}</span>
+						</span><span class="recently__profile">
+							<span class="recently__profile-name">{{ item.whomName }}</span>
+							<span class="recently__profile-city">{{ item.whomCity }}</span>
+						</span>
+					</span>
+				</a>
+			</li>
+		{%- endfor %}
+	</ul>
+</div>

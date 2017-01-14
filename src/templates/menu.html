@@ -1,0 +1,12 @@
+{% set menu = [
+	{"link": "#", "title": "Как это работает"},
+	{"link": "#", "title": "Обратная связь"}
+]%}
+
+<ul class="menu">
+	{% for item in menu %}
+		<li class="menu__item {% if item.active %}menu__item_active{% endif %}">
+			<a href="{{ item.link }}" class="menu__link">{{ item.title }}</a>
+		</li>
+	{% endfor %}
+</ul>

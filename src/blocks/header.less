@@ -1,0 +1,46 @@
+@import "var";
+
+.logo{
+	float: left;
+	width: 280px;
+	height: 40px;
+	position: relative;
+
+	&__image{
+		max-height: 40px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+.header{
+	position: relative;
+	overflow: hidden;
+	min-width: 990px;
+	padding-bottom: 60px;
+	background: linear-gradient(@gr-light-grey, @gr-dark-grey);
+
+	&__top{
+		padding: 45px 0 50px;
+	}
+
+	&__menu{
+		margin: 10px 0 0 290px;
+		text-align: right;
+	}
+
+	.page_home &:before{
+		content: "";
+		position: absolute;
+		bottom: 35px;
+		left: 50%;
+		margin-left: 410px;
+		background: url(../images/header-hand.png) no-repeat;
+		width: 386px;
+		height: 112px;
+	}
+}

@@ -1,0 +1,44 @@
+@import "var";
+
+.panel{
+	width: 940px;
+	margin: 0 auto;
+	min-height: 260px;
+	background: linear-gradient(@gr-top-panel, @gr-bottom-panel);
+	padding: 35px 65px 45px;
+	box-sizing: border-box;
+	position: relative;
+
+	&:before{
+		content: "";
+		position: absolute;
+		right: 100%;
+		top: 80px;
+		background: url(../images/hand.png) no-repeat;
+		width: 373px;
+		height: 200px;
+		margin-right: -42px;
+	}
+
+	&__title{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	&__right{
+		float: right;
+		margin-left: 15px;
+	}
+
+	&__fix{
+		overflow: hidden;
+	}
+
+	&__line{
+		margin-bottom: 15px;
+	}
+
+	&__city{
+		line-height: 25px;
+	}
+}

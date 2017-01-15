@@ -49,6 +49,12 @@
 
 	&__row{
 		padding-bottom: 20px;
+
+		&_total{
+			border-top: 1px solid fade(@c-border, 20%);
+			margin: 20px 0;
+			padding-top: 20px;
+		}
 	}
 
 	&__fix{
@@ -79,6 +85,14 @@
 		&_160{
 			width: 160px;
 		}
+
+		&_300{
+			width: 300px;
+		}
+
+		&_455{
+			width: 455px;
+		}
 	}
 
 	&__desc{
@@ -86,6 +100,12 @@
 		vertical-align: middle;
 		font-size: @s-middle;
 		padding: 5px 15px 0;
+
+		&_bottom{
+			display: block;
+			padding: 5px 0 0;
+			font-size: @s-normal;
+		}
 	}
 
 	&__controls{
@@ -120,6 +140,22 @@
 
 		&:hover:before{
 			background-position: bottom center;
+		}
+	}
+
+	&__price{
+		display: inline-block;
+		white-space: nowrap;
+		font-size: @s-big;
+		font-weight: 500;
+
+		&:after{
+			content: " ₽";
+			font-family: Arial;
+		}
+
+		&-desc{
+			font-size: @s-middle;
 		}
 	}
 }

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% set title = "Заказ доставки" %}
+
+{% set breadcrumbs = [
+	{"link": "/", "title": "Главная"},
+	{"link": "/calc.html", "title": "Расчет доставки"},
+	{"title": "Заказ доставки"},
+	{"title": "Оплата", "disabled": true}
+]%}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block pageClass %}page_box{% endblock %}
+
+{% block panel %}
+	<form class="panel panel__form" action="#" method="get">
+		{% include 'breadcrumbs.html' %}
+		<h1 class="panel__title panel__title_left">{{ title }}</h1>
+		<div class="panel__description">Заполните контактные данные</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Ваше имя</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper">
+					<input type="text" name="yourName" />
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Мобильный телефон</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper panel__wrapper_300">
+					<input type="text" name="phone"/>
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Электронная почта</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper panel__wrapper_455">
+					<input type="text" name="mail" />
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Мобильный телефон продавца</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper panel__wrapper_300">
+					<input type="text" name="phoneSeller" />
+				</div>
+				<div class="panel__desc panel__desc_bottom">На этот номер придет SMS для подтверждения сделки</div>
+			</div>
+		</div>
+		<div class="panel__row panel__row_total clearfix">
+			<label class="panel__label">&nbsp;</label>
+			<div class="panel__fix">
+				<div class="panel__price">5 340</div>
+				<div class="panel__price-desc">Общая стоимость товаров с доставкой</div>
+			</div>
+		</div>
+		<div class="panel__controls clearfix">
+			<div class="panel__label">
+				<a href="/" class="panel__link">Расчет доставки</a>
+			</div>
+			<div class="panel__fix">
+				<input type="submit" name="submit" class="btn" value="Оплатить" />
+			</div>
+		</div>
+	</form>
+{% endblock %}

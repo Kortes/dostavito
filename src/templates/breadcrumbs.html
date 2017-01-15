@@ -1,0 +1,14 @@
+<div class="breadcrumbs">
+	<ul class="breadcrumbs__list">
+		{% for item in breadcrumbs %}
+			<li class="breadcrumbs__item
+					   {% if item.disabled %}breadcrumbs__item_disabled{% endif %}">
+				{% if item.link %}
+					<a href="{{ item.link }}" class="breadcrumbs__link">{{ item.title }}</a>
+				{% else %}
+					{{ item.title }}
+				{% endif %}		   	
+			</li>
+		{% endfor %}
+	</ul>
+</div>

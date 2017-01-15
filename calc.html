@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+      <link rel="stylesheet" href="style/main.css" />
+      <title>Расчет стоимости доставки - Dostavito</title>
+      <meta charset='utf-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <meta name='description' content=''>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body class="page page_calc">
+    <div class="page__inner">
+      <div class="header">
+        <div class="header__container container">
+          
+            <div class="header__top clearfix">
+	<a href="/" class="logo">
+		<img src="images/logo.png" class="logo__image" />
+	</a>
+	<div class="header__menu">
+		
+
+<ul class="menu">
+	
+		<li class="menu__item ">
+			<a href="#" class="menu__link">Как это работает</a>
+		</li>
+	
+		<li class="menu__item ">
+			<a href="#" class="menu__link">Обратная связь</a>
+		</li>
+	
+</ul>
+	</div>
+</div>
+          
+          
+	<form class="panel panel__form" action="#" method="get">
+		<div class="breadcrumbs">
+	<ul class="breadcrumbs__list">
+		
+			<li class="breadcrumbs__item
+					   ">
+				
+					<a href="/" class="breadcrumbs__link">Главная</a>
+						   	
+			</li>
+		
+			<li class="breadcrumbs__item
+					   ">
+				
+					Расчет доставки
+						   	
+			</li>
+		
+			<li class="breadcrumbs__item
+					   breadcrumbs__item_disabled">
+				
+					Заказ доставки
+						   	
+			</li>
+		
+			<li class="breadcrumbs__item
+					   breadcrumbs__item_disabled">
+				
+					Оплата
+						   	
+			</li>
+		
+	</ul>
+</div>
+		<h1 class="panel__title panel__title_left">Расчет стоимости доставки</h1>
+		<div class="panel__description">Заполните необходимые данные для расчета</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Название товара</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper">
+					<input type="text" name="product" value="Телевизор Sony" />
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Стоимость</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper panel__wrapper_160">
+					<input type="text" name="price" value="5 000" />
+				</div>
+				<div class="panel__desc">руб.</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Город продавца</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper select-wrapper">
+					<select class="panel__select select" name="seller">
+						
+							<option value="29">Архангельск</option>
+						
+							<option value="66">Екатеринбург</option>
+						
+							<option value="77">Москва</option>
+						
+							<option value="89">Салехард</option>
+						
+							<option value="11">Сыктывкар</option>
+						
+							<option value="86">Ханты-Мансий</option>
+						
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Ваш город</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper select-wrapper">
+					<select class="panel__select select" name="yourcity">
+						
+							<option value="29">Архангельск</option>
+						
+							<option value="66">Екатеринбург</option>
+						
+							<option value="77">Москва</option>
+						
+							<option value="89">Салехард</option>
+						
+							<option value="11">Сыктывкар</option>
+						
+							<option value="86">Ханты-Мансий</option>
+						
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Вес товара</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper panel__wrapper_160">
+					<input type="text" name="weight" />
+				</div>
+				<div class="panel__desc">кг.</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Габариты</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper panel__wrapper_110">
+					<input type="text" name="length" />
+				</div>
+				<div class="panel__desc">x</div>
+				<div class="panel__wrapper panel__wrapper_110">
+					<input type="text" name="width" />
+				</div>
+				<div class="panel__desc">x</div>
+				<div class="panel__wrapper panel__wrapper_110">
+					<input type="text" name="height" />
+				</div>
+				<div class="panel__desc">см.</div>
+			</div>
+		</div>
+		<div class="panel__controls clearfix">
+			<div class="panel__label">
+				<a href="/" class="panel__link">На главную</a>
+			</div>
+			<div class="panel__fix">
+				<input type="submit" name="submit" class="btn" value="Рассчитать" />
+			</div>
+		</div>
+	</form>
+
+          
+        </div>
+      </div>
+      <div class="container page__container">
+        
+      </div>
+      <div class="page__footer"></div>
+    </div>
+    
+      <div class="footer">
+	<div class="footer__container container">
+		<div class="footer__copy">© Dostavito, 2016</div>
+		<div class="footer__menu">
+			
+
+<ul class="menu">
+	
+		<li class="menu__item ">
+			<a href="#" class="menu__link">Как это работает</a>
+		</li>
+	
+		<li class="menu__item ">
+			<a href="#" class="menu__link">Обратная связь</a>
+		</li>
+	
+</ul>
+		</div>
+	</div>
+</div>
+    
+    <div class="hide">
+      
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="ui/fancybox/fancybox.js"></script>
+    
+	<script src="ui/select2/dist/js/select2.min.js"></script>
+
+    <script src='js/main.js'></script>
+</body>
+</html>

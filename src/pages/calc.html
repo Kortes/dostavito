@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% set title = "Расчет стоимости доставки" %}
+
+{% set breadcrumbs = [
+	{"link": "/", "title": "Главная"},
+	{"title": "Расчет доставки"},
+	{"title": "Заказ доставки", "disabled": true},
+	{"title": "Оплата", "disabled": true}
+]%}
+
+{% set city = [
+	{"value": "29", "title": "Архангельск"},
+	{"value": "66", "title": "Екатеринбург"},
+	{"value": "77", "title": "Москва"},
+	{"value": "89", "title": "Салехард"},
+	{"value": "11", "title": "Сыктывкар"},
+	{"value": "86", "title": "Ханты-Мансий"}
+]%}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block pageClass %}page_calc{% endblock %}
+
+{% block panel %}
+	<form class="panel panel__form" action="#" method="get">
+		{% include 'breadcrumbs.html' %}
+		<h1 class="panel__title panel__title_left">{{ title }}</h1>
+		<div class="panel__description">Заполните необходимые данные для расчета</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Название товара</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper">
+					<input type="text" name="product" value="Телевизор Sony" />
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Стоимость</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper panel__wrapper_160">
+					<input type="text" name="price" value="5 000" />
+				</div>
+				<div class="panel__desc">руб.</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Город продавца</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper select-wrapper">
+					<select class="panel__select select" name="seller">
+						{% for item in city %}
+							<option value="{{ item.value }}">{{ item.title }}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Ваш город</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper select-wrapper">
+					<select class="panel__select select" name="yourcity">
+						{% for item in city %}
+							<option value="{{ item.value }}">{{ item.title }}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Вес товара</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper panel__wrapper_160">
+					<input type="text" name="weight" />
+				</div>
+				<div class="panel__desc">кг.</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Габариты</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper panel__wrapper_110">
+					<input type="text" name="length" />
+				</div>
+				<div class="panel__desc">x</div>
+				<div class="panel__wrapper panel__wrapper_110">
+					<input type="text" name="width" />
+				</div>
+				<div class="panel__desc">x</div>
+				<div class="panel__wrapper panel__wrapper_110">
+					<input type="text" name="height" />
+				</div>
+				<div class="panel__desc">см.</div>
+			</div>
+		</div>
+		<div class="panel__controls clearfix">
+			<div class="panel__label">
+				<a href="/" class="panel__link">На главную</a>
+			</div>
+			<div class="panel__fix">
+				<input type="submit" name="submit" class="btn" value="Рассчитать" />
+			</div>
+		</div>
+	</form>
+{% endblock %}
+
+{% block script %}
+	<script src="ui/select2/dist/js/select2.min.js"></script>
+{% endblock %}

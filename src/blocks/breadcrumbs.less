@@ -1,0 +1,44 @@
+@import "var";
+
+.breadcrumbs{
+	text-align: center;
+	margin-bottom: 30px;
+
+	&__list{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		padding-left: 35px;
+
+		&:before{
+			content: "";
+			position: absolute;
+			left: 10px;
+			top: 5px;
+			width: 13px;
+			height: 9px;
+			background: url(../images/breadcrumbs.png) no-repeat;
+		}
+
+		&_disabled{
+			color: #b8b8b8;
+
+			&:before{
+				opacity: 0.5;
+			}
+		}
+
+		&:first-child{
+			padding: 0;
+
+			&:before{
+				display: none;
+			}
+		}
+	}
+}

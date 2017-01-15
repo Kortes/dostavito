@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% set title = "Вы подтвердили продажу<br>товара с доставкой" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block pageClass %}page_ok{% endblock %}
+
+{% block panel %}
+	<div class="panel panel_with_text">
+		<h1 class="panel__title">{{ title }}</h1>
+		<div class="text">
+			<p>В течение 3-х часов с вами свяжется курьер и обсудит удобное время, чтобы забрать товар. После доставки товара покупателю, мы переведем стоимость товара на указанную карту.</p>
+
+			<p>Если у вас остались вопросы — напишите нам на <a href="mailto:inbox@dostavito.ru">inbox@dostavito.ru</a></p>
+		</div>
+	</div>
+{% endblock %}

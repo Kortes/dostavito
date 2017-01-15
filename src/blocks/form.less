@@ -34,6 +34,32 @@ input[type="text"]{
 		text-decoration: none !important;
 		display: inline-block;
 	}
+
+	&_success{
+		background: linear-gradient(@c-green, @c-green-dark);
+		color: @c-white !important;
+
+		&:hover{
+			background: linear-gradient(@c-green-hover, @c-green-hover-dark);
+		}
+
+		&:hover{
+			background: linear-gradient(@c-green-click, @c-green-click-dark);
+		}
+	}
+
+	&_refuse{
+		background: linear-gradient(@c-red, @c-red-dark);
+		color: @c-white !important;
+
+		&:hover{
+			background: linear-gradient(@c-red-hover, @c-red-hover-dark);
+		}
+
+		&:hover{
+			background: linear-gradient(@c-red-click, @c-red-click-dark);
+		}
+	}
 }
 
 .select2{
@@ -161,5 +187,66 @@ input[type="text"]{
 				color: @c-white;
 			}
 		}
+	}
+}
+
+.checkbox{
+	display: inline-block;
+
+	&__input{
+		display: none;
+
+		&:checked + .checkbox__label{
+			&:after{
+				width: 8px;
+				height: 5px;
+				border-left: 2px solid @c-link;
+				border-bottom: 2px solid @c-link;
+				left: 6px;
+				top: 5px;
+				transform: rotate(-45deg);
+			}
+
+			&:hover:after,
+			&:active:after{
+				border-color: @c-link-hover;
+			}
+		}
+	}
+
+	&__label{
+		padding-left: 30px;
+		position: relative;
+		display: block;
+		cursor: pointer;
+
+		&:before,
+		&:after{
+			content: "";
+			position: absolute;
+			width: 21px;
+			height: 21px;
+		}
+
+		&:before{
+			top: -2px;
+			left: 0;
+			border-radius: 3px;
+			background: @c-white;
+			border: 1px solid @c-grey;
+			box-shadow: inset 0 1px 2px fade(@c-black, 30%);
+		}
+
+		&:hover:before{
+			border-color: fade(@c-border, 20%);
+			box-shadow: inset 0 1px 2px fade(@c-border, 30%);
+		}
+
+		&:active:before{
+			border-color: fade(@c-border, 20%);
+			background: #f6f9fa;
+			box-shadow: inset 0 5px 5px fade(@c-border, 30%);
+		}
+		
 	}
 }

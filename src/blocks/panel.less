@@ -20,9 +20,15 @@
 		margin-right: -42px;
 	}
 
+	&_with_text{
+		padding-left: 95px;
+		padding-right: 95px;
+	}
+
 	&__title{
 		text-align: center;
 		margin-bottom: 20px;
+		line-height: 1;
 
 		&_left{
 			text-align: left;
@@ -112,6 +118,24 @@
 		background: @c-panel-bottom;
 		margin: 25px -65px -45px;
 		padding: 25px 65px;
+
+		.panel_with_text &{
+			margin: 25px -95px -45px;
+			padding: 25px 95px;
+		}
+
+		&-item{
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 30px;
+		}
+
+		&-desc{
+			font-size: 15px;
+			line-height: 18px;
+			margin-top: 10px;
+			max-width: 315px;
+		}
 	}
 
 	&__link{
@@ -156,6 +180,55 @@
 
 		&-desc{
 			font-size: @s-middle;
+		}
+	}
+
+	&__info{
+		padding: 20px 0 30px 25px;
+		position: relative;
+
+		&:before{
+			content: "";
+			position: absolute;
+			top: 20px;
+			left: 0;
+			width: 53px;
+			height: 58px;
+			background: url(../images/calc-info.png) no-repeat right bottom;
+		}
+
+		&-cell{
+			width: 50%;
+			padding-left: 50px;
+			box-sizing: border-box;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		&-title{
+			font-size: @s-middle;
+			font-weight: 500;
+			margin-bottom: 15px;
+		}
+
+		&-list{
+			display: table;
+			width: 100%;
+		}
+
+		&-item{
+			display: table-row;
+		}
+
+		&-name{
+			font-weight: 100;
+			padding:0 20px 10px 0;
+			display: table-cell;
+		}
+
+		&-value{
+			display: table-cell;
+			padding-bottom: 10px;
 		}
 	}
 }

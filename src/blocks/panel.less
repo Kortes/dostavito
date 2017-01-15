@@ -96,8 +96,9 @@
 
 	&__link{
 		position: relative;
-		padding: 8px 0 0 40px;
+		padding: 13px 0 0 40px;
 		display: inline-block;
+		line-height: 1;
 
 		&:before{
 			content: "";
@@ -107,6 +108,14 @@
 			left: 0;
 			top: 13px;
 			background: url(../images/panel-arrow.png) no-repeat top center;
+		}
+
+		&_multi{
+			padding-top: 0;
+
+			&:before{
+				top: 2px;
+			}
 		}
 
 		&:hover:before{

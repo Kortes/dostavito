@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% set title = "Расчет стоимости доставки" %}
+
+{% set breadcrumbs = [
+	{"link": "/", "title": "Главная"},
+	{"title": "Расчет доставки"},
+	{"title": "Заказ доставки", "disabled": true},
+	{"title": "Оплата", "disabled": true}
+]%}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block pageClass %}page_calc{% endblock %}
+
+{% block panel %}
+	<form class="panel panel__form" action="#" method="get">
+		{% include 'breadcrumbs.html' %}
+		<h1 class="panel__title panel__title_left">{{ title }}</h1>
+		{% include 'calc-info.html' %}
+		<div class="panel__controls clearfix">
+			<div class="panel__label">
+				<a href="/" class="panel__link panel__link_multi">Изменить параметры</a>
+			</div>
+			<div class="panel__fix">
+				<input type="submit" name="submit" class="btn" value="Заказать доставку" />
+			</div>
+		</div>
+	</form>
+{% endblock %}
+
+{% block script %}
+	<script src="ui/select2/dist/js/select2.min.js"></script>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% set title = "Укажите реквизиты<br>для получения оплаты" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block panel %}
+	<form class="panel panel__form panel_with_text" action="#" method="get">
+		<h1 class="panel__title panel__title_left">{{ title }}</h1>
+		<div class="panel__inner">
+			<div class="panel__row clearfix">
+				<label class="panel__label">ФИО</label>
+				<div class="panel__fix">
+					<div class="panel__wrapper">
+						<input type="text" name="name"/>
+					</div>
+				</div>
+			</div>
+			<div class="panel__row clearfix">
+				<label class="panel__label">Номер карты</label>
+				<div class="panel__fix">
+					<div class="panel__wrapper panel__wrapper_300">
+						<input type="text" name="card"/>
+					</div>
+				</div>
+			</div>
+			<div class="panel__row clearfix">
+				<label class="panel__label">БИК</label>
+				<div class="panel__fix">
+					<div class="panel__wrapper panel__wrapper_300">
+						<input type="text" name="bik"/>
+					</div>
+				</div>
+			</div>
+			<div class="panel__row clearfix">
+				<label class="panel__label">Расчетный счет</label>
+				<div class="panel__fix">
+					<div class="panel__wrapper">
+						<input type="text" name="account"/>
+					</div>
+				</div>
+			</div>
+			<div class="panel__row clearfix">
+				<label class="panel__label">Электронная почта</label>
+				<div class="panel__fix">
+					<div class="panel__wrapper">
+						<input type="text" name="mail"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel__controls clearfix">
+			<div class="panel__label">&nbsp;</div>
+			<div class="panel__fix">
+				<input type="submit" name="submit" class="btn" value="Сохранить" />
+			</div>
+		</div>
+	</form>
+{% endblock %}

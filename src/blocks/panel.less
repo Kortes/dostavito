@@ -40,6 +40,16 @@
 	&__description{
 		margin-bottom: 35px;
 		margin-top: 3px;
+
+		&_warning{
+			color: @c-warning;
+			font-weight: 500;
+		}
+
+		&_error{
+			color: @c-error;
+			font-weight: 500;
+		}
 	}
 
 	&__right{
@@ -52,7 +62,7 @@
 		width: 230px;
 		margin-right: 15px;
 		font-size: @s-middle;
-		padding-top: 13px;
+		padding-top: 15px;
 	}
 
 	&__row{
@@ -81,9 +91,26 @@
 		display: inline-block;
 		vertical-align: middle;
 		width: 100%;
+		padding: 2px;
+		box-sizing: border-box;
 
 		input[type="text"]{
 			padding: 12px 12px 8px;
+
+			.panel__wrapper_warning&{
+				box-shadow: inset 0 2px 4px fade(@c-black, 30%), 0 0 0 2px @c-warning;
+				border-color: @c-warning;
+			}
+
+			.panel__wrapper_error&{
+				box-shadow: inset 0 2px 4px fade(@c-black, 30%), 0 0 0 2px @c-error;
+				border-color: @c-error;
+			}
+
+			.panel__wrapper_success&{
+				box-shadow: inset 0 2px 4px fade(@c-black, 30%), 0 0 0 2px @c-success;
+				border-color: @c-success;
+			}
 		}
 
 		&_110{
@@ -113,6 +140,40 @@
 			display: block;
 			padding: 5px 0 0;
 			font-size: @s-normal;
+		}
+
+		&_error{
+			color: @c-error;
+		}
+
+		&_warning{
+			color: @c-warning;
+		}
+
+		&_success{
+			color: @c-success;
+		}
+	}
+
+	&__error{
+		display: none;
+		padding: 5px 0 0;
+		font-size: @s-normal;
+		font-weight: 500;
+
+		.panel__wrapper_warning &{
+			color: @c-warning;
+			display: block;
+		}
+
+		.panel__wrapper_error &{
+			color: @c-error;
+			display: block;
+		}
+
+		.panel__wrapper_success &{
+			color: @c-success;
+			display: block;
 		}
 	}
 

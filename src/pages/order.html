@@ -17,28 +17,33 @@
 	<form class="panel panel__form" action="#" method="get">
 		{% include 'breadcrumbs.html' %}
 		<h1 class="panel__title panel__title_left">{{ title }}</h1>
-		<div class="panel__description">Заполните контактные данные</div>
+		<div class="panel__description hide">Заполните контактные данные</div>
+
+		<div class="panel__description panel__description_warning">Заполните все обязательные контактные данные</div>
 		<div class="panel__row clearfix">
 			<label class="panel__label">Ваше имя</label>
 			<div class="panel__fix">
-				<div class="panel__wrapper">
+				<div class="panel__wrapper panel__wrapper_error">
 					<input type="text" name="yourName" />
+					<div class="panel__error">Текст ошибки</div>
 				</div>
 			</div>
 		</div>
 		<div class="panel__row clearfix">
 			<label class="panel__label">Мобильный телефон</label>
 			<div class="panel__fix">
-				<div class="panel__wrapper panel__wrapper_300">
+				<div class="panel__wrapper panel__wrapper_300 panel__wrapper_warning">
 					<input type="text" name="phone"/>
+					<div class="panel__error">Текст предупреждения</div>
 				</div>
 			</div>
 		</div>
 		<div class="panel__row clearfix">
 			<label class="panel__label">Электронная почта</label>
 			<div class="panel__fix">
-				<div class="panel__wrapper panel__wrapper_455">
+				<div class="panel__wrapper panel__wrapper_455 panel__wrapper_success">
 					<input type="text" name="mail" />
+					<div class="panel__error">Текст правильного действия(вдруг понадобится)</div>
 				</div>
 			</div>
 		</div>

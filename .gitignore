@@ -5,3 +5,4 @@ design/
 *.sublime-project
 *.sublime-workspace
 build.zip
+Thumbs.db

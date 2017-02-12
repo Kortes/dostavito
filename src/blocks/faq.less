@@ -1,0 +1,43 @@
+@import "var";
+
+.faq{
+	padding: 40px 0;
+
+	&__cell{
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		box-sizing: border-box;
+
+		&:first-child{
+			padding-right: 45px;
+		}
+
+		&:last-child{
+			padding-left: 45px;
+		}
+	}
+
+	&__title{
+		margin-bottom: .5em;
+		position: relative;
+
+		&_seller:before{
+			content: "...";
+			position: absolute;
+			color: darken(@gr-dark-grey, 30.3%);
+			top: 0;
+			left: -45px;
+		}
+	}
+
+	&__item{
+		margin-bottom: 25px;
+		font-size: 15px;
+	}
+
+	&__question{
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+}

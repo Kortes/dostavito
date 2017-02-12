@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% set title = "Как это работает?" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block pageClass %}page_work{% endblock %}
+
+{% block description %}
+	<h1 class="header__title">{{ title }}</h1>
+	{% include 'work.html' %}
+{% endblock %}
+
+{% block content %}
+	{% include 'faq.html' %}
+{% endblock %}

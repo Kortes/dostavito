@@ -1,0 +1,185 @@
+@import "var";
+
+.work{
+	padding-top: 60px;
+
+	&__cart{
+		width: 50%;
+		box-sizing: border-box;
+		position: relative;
+
+		&:before{
+			content: "";
+			position: absolute;
+			width: 1px;
+			top: 0;
+			height: 50px;
+			background: @c-work-border;
+		}
+
+		&:after{
+			content: "";
+			position: absolute;
+			width: 1px;
+			top: 50px;
+			bottom: 0;
+			background: @c-work-border;
+		}
+
+		&:first-child:before{
+			display: none;
+		}
+
+		&:last-child:after{
+			display: none;
+		}
+
+		&_type_buyer{
+			float: left;
+			padding-right: 25px;
+
+			&:before,
+			&:after{
+				right: 0;
+			}
+		}
+
+		&_type_seller{
+			float: right;
+			padding-left: 25px;
+			left: -1px;
+
+			&:before,
+			&:after{
+				left: 0;
+			}
+		}
+
+		&_clear_left{
+			clear:left;
+		}
+
+		&_clear_right{
+			clear:right;
+		}
+
+		&_clear_all{
+			clear:both;
+		}
+	}
+
+	&__inner{
+		padding: 35px 175px 20px 85px;
+		min-height: 95px;
+		margin-bottom: 25px;
+		position: relative;
+
+		&:before{
+			content: "";
+			position: absolute;
+			top: 35px;
+			border-top: 15px solid transparent;
+			border-bottom: 15px solid transparent;
+		}
+
+		&:after{
+			content: "";
+			position: absolute;
+			top: 50px;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background: @c-work-border;
+			margin: -3px 0 0 -3px;
+		}
+
+		.work__cart_type_buyer &{
+			background: linear-gradient(@gr-top-panel 60px, @gr-bottom-panel);
+
+			&:before{
+				border-left: 15px solid @gr-top-panel;
+				left: 100%;
+			}
+
+			&:after{
+				left: 100%;
+				margin-left: 21px;
+			}
+		}
+
+		.work__cart_type_seller &{
+			background: @c-seller;
+
+			&:before{
+				border-right: 15px solid @c-seller;
+				right: 100%;
+			}
+
+			&:after{
+				right: 100%;
+				margin-right: 21px;
+			}
+		}
+	}
+
+	&__title{
+		font-size: 35px;
+		font-weight: 500;
+		position: absolute;
+		top: -70px;
+		left: 0;
+	}
+
+	&__image{
+		top: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		width: 175px;
+	}
+
+	&__img{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto 0 0 auto;
+	}
+
+	&__index{
+		position: absolute;
+		left: 30px;
+		top: 30px;
+		font-size: 63px;
+		font-weight: 100;
+		line-height: 1;
+
+		.work__cart_type_buyer &{
+			color: darken(@gr-dark-grey, 30.3%);
+		}
+	}
+
+	&__body{
+		&-title{
+			margin-bottom: 10px;
+			line-height: 25px;
+		}
+
+		&-text{
+			font-size: 15px;
+
+			ul li{
+				padding-left: 20px;
+				position: relative;
+				margin-bottom: 10px;
+
+				&:before{
+					content: "—";
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+	}
+}

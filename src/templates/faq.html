@@ -17,8 +17,8 @@
 	]}
 ]%}
 
-<div class="faq clearfix">
-	{% for cell in faq -%}
+<div class="faq">
+	{% for cell in faq %}
 		<div class="faq__cell">
 			<div class="faq__title h1 faq__title_{{ cell.type }}">{{ cell.title }}</div>
 			<ul class="faq__list">
@@ -30,5 +30,5 @@
 				{% endfor %}
 			</ul>
 		</div>
-	{%- endfor %}
+	{% endfor %}
 </div>

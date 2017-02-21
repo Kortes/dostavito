@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% set title = "Заполните форму обратной связи" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block panel %}
+	<form class="panel panel__form" action="#" method="get">
+		<h1>{{ title }}</h1>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Ваше имя</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper">
+					<input type="text" name="yourName" />
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Электронная почта</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper">
+					<input type="text" name="mail" />
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Телефон</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper">
+					<input type="text" name="phone"/>
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
+			<label class="panel__label">Сообщение</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper">
+					<textarea name="text"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="panel__controls clearfix">
+			<div class="panel__label"></div>
+			<div class="panel__fix">
+				<input type="submit" name="submit" class="btn" value="Оплатить" />
+			</div>
+		</div>
+	</form>
+{% endblock %}

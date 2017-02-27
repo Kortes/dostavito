@@ -89,7 +89,7 @@
 
 	&__wrapper{
 		display: inline-block;
-		vertical-align: middle;
+		vertical-align: top;
 		width: 100%;
 		padding: 2px;
 		box-sizing: border-box;
@@ -117,6 +117,10 @@
 			width: 110px;
 		}
 
+		&_115{
+			width: 115px;
+		}
+
 		&_160{
 			width: 160px;
 		}
@@ -132,9 +136,9 @@
 
 	&__desc{
 		display: inline-block;
-		vertical-align: middle;
+		vertical-align: top;
 		font-size: @s-middle;
-		padding: 5px 15px 0;
+		padding: 15px 15px 0;
 
 		&_bottom{
 			display: block;
@@ -159,6 +163,7 @@
 		display: none;
 		padding: 5px 0 0;
 		font-size: @s-normal;
+		line-height: 1.2em;
 		font-weight: 500;
 
 		.panel__wrapper_warning &{

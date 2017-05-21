@@ -7,6 +7,10 @@
 	border-top: 1px solid fade(@c-border, 20%);
 	padding-top: 45px;
 
+	&__contant{
+		float: left;
+	}
+
 	&__copy{
 		display: inline-block;
 		vertical-align: top;
@@ -22,5 +26,17 @@
 
 	.page_home &{
 		border-top: none;
+	}
+
+	&__info{
+		float: right;
+		font-size: 12px;
+		margin-top: 10px;
+
+		&-item{
+			margin-left: 15px;
+			display: inline-block;
+			vertical-align: top
+		}
 	}
 }

@@ -1,0 +1,43 @@
+{% set partner = [
+	{
+		"logo": "images/partner1.png", 
+		"title": "safecrow",
+		"type": "Доставка товаров", 
+		"list": [
+			"Международная транспортная компания",
+			"Более 25 лет на рынке",
+			"Признанный лидер российского рынка экспресс-доставки посылок и грузов"
+		]
+	},
+	{
+		"logo": "images/partner2.png", 
+		"title": "dpd",
+		"type": "Безопасность платежей", 
+		"list": [
+			"Эксперты в области финансовых технологий (входит в холдинг Finteca)",
+			"12 лет успешной работы в E-commerce",
+			"Финансовые транзакции через счет в государственном банке"
+		]
+	}
+]%}
+
+<div class="partner">
+	<div class="container page__container">
+		<div class="h1 partner__title">Партнеры</div>
+		<ul class="partner__list">
+			{% for item in partner -%}
+				<li class="partner__item">
+					<div class="partner__image">
+						<img src="{{ item.logo }}" alt="{{ item.title }}" class="partner__img" />
+					</div>
+					<div class="partner__item-title">{{ item.type }}</div>
+					<ul class="partner__item-list info__list">
+						{% for subitem in item.list -%}
+							<li class="partner__subitem">{{ subitem }}</li>
+						{%- endfor %}
+					</ul>
+				</li>
+			{%- endfor %}
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+{% set advantages = [
+	{
+		"image": "/images/payment.png",
+		"title": "Оплата после&nbsp;получения",
+		"text": "Покупатель вносит предоплату банковской картой. Продавцу деньги переводятся только после приёмки товара. Безопасность платежей обеспечивает <a href='#'>Safecrow.</a>"
+	},
+	{
+		"image": "/images/reliability.png",
+		"title": "Надежная доставка от&nbsp;двери до&nbsp;двери",
+		"text": "Покупки доставляет крупный международный оператор&nbsp;<a href='#'>DPD</a>.<br>Все покупки застрахованы."
+	},
+	{
+		"image": "/images/return.png",
+		"title": "Можно отказаться при&nbsp;получении",
+		"text": "Если покупатель отказывается<br>от&nbsp;покупки — стоимость товара возвращается на&nbsp;карту, а&nbsp;товар отправляется обратно продавцу."
+	}
+]%}
+
+<div class="advantages">
+	<div class="container page__container">
+		<ul class="advantages__list">
+			{% for item in advantages -%}
+				<li class="advantages__item">
+					<div class="advantages__image">
+						<img src="{{ item.image }}" alt="{{ item.title }}" class="advantages__img" />
+					</div>
+					<div class="advantages__title">{{ item.title }}</div>
+					<div class="advantages__text">{{ item.text }}</div>
+				</li>
+			{%- endfor %}
+		</ul>
+		<div class="advantages__bottom">
+			<a href="/calc.html" class="btn">Рассчитать доставку</a>
+		</div>
+	</div>
+</div>

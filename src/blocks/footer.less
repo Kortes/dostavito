@@ -1,11 +1,11 @@
 @import "var";
 
 .footer{
-	height: 100px;
-	margin-top: -100px;
+	height: 120px;
+	margin-top: -120px;
 	box-sizing: border-box;
 	border-top: 1px solid fade(@c-border, 20%);
-	padding-top: 30px;
+	padding-top: 45px;
 
 	&__copy{
 		display: inline-block;
@@ -18,5 +18,9 @@
 	&__menu{
 		display: inline-block;
 		vertical-align: top;
+	}
+
+	.page_home &{
+		border-top: none;
 	}
 }

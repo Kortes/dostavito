@@ -1,13 +1,45 @@
 {% set list = [
-	{"type": "calculate", "title": "Расчитайте<br>стоимость доставки"},
-	{"type": "pay", "title": "Оплатите товар<br>и доставку"},
-	{"type": "courier", "title": "Ждите курьера<br>с товаром"}
+	{
+		"image": "/images/list1.png", 
+		"title": "Найдите<br>объявление"
+	},
+	{
+		"image": "/images/list2.png", 
+		"title": "Рассчитайте<br>стоимость доставки",
+		"link": "/calc.html"
+	},
+	{
+		"image": "/images/list3.png", 
+		"title": "Оплатите товар с&nbsp;доставкой<br>и&nbsp;ждите курьера"
+	}
 ]%}
 
+{% set cls = cycler("odd", "even") %}
+
 <div class="list">
-	<ul class="list__list">
-		{% for item in list %}
-			<li class="list__item list__item_type_{{ item.type }}">{{ item.title }}</li>
-		{% endfor %}
-	</ul>
+	<div class="container page__container">
+		<h1 class="list__title">Покупайте товары на Авито, Из рук в руки<br>и других площадках, не выходя из дома</h1>
+		<ul class="list__list">
+			{% for item in list -%}
+				{% set cls_item = cls.next() %}
+				<li class="list__item list__item_{{ cls_item }}">
+					{% if cls_item != "odd" %}
+						<div class="list__image">
+							<img src="{{ item.image }}" class="list__img" alt="{{ item.title }}" />
+						</div>
+					{% endif %}
+					{% if item.link %}
+						<a href="{{ item.link }}" class="list__item-title">{{ item.title }}</a>
+					{% else %}
+						<div class="list__item-title">{{ item.title }}</div>
+					{% endif %}
+					{% if cls_item == "odd" %}
+						<div class="list__image">
+							<img src="{{ item.image }}" class="list__img" alt="{{ item.title }}" />
+						</div>
+					{% endif %}
+				</li>
+			{%- endfor %}
+		</ul>
+	</div>
 </div>

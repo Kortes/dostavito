@@ -1,0 +1,51 @@
+@import "var";
+
+.advantages{
+	background: @c-blue-panel;
+	padding: 90px 0 115px;
+	text-align: center;
+
+	&__list{
+		padding-bottom: 75px;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		box-sizing: border-box;
+		width: 33%;
+		padding: 0 50px;
+	}
+
+	&__image{
+		height: 100px;
+		position: relative;
+	}
+
+	&__img{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		max-height: 100px;
+	}
+
+	&__title{
+		font-size: 28px;
+		line-height: 1;
+		font-weight: 300;
+		padding: 25px 0 15px;
+	}
+
+	&__text{
+		font-size: @s-middle;
+		line-height: 1.2;
+		font-weight: 100;
+
+		a{
+			font-weight: 300;
+		}
+	}
+}

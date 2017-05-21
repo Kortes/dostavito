@@ -10,34 +10,36 @@
 ]%}
 
 <div class="recently">
-	<div class="h1 recently__title">Недавно купили</div>
-	<ul class="recently__list">
-		{% for item in list -%}
-			<li class="recently__item">
-				<a href="{{ item.link }}" class="recently__link">
-					<span class="recently__image">
-						<img class="recently__img" src="{{ item.image }}" />
-					</span>
-					<span class="recently__price">{{ item.price }}</span>
-					<span class="recently__name">{{ item.title }}</span>
-					<span class="recently__info">
-						<span class="recently__delivery">
-							Доставка {{ item.delivery }} Р
-						</span><span class="recently__way">
-							В пути {{ item.way }}
+	<div class="container page__container">
+		<div class="h1 recently__title">Недавно купили</div>
+		<ul class="recently__list">
+			{% for item in list -%}
+				<li class="recently__item">
+					<a href="{{ item.link }}" class="recently__link">
+						<span class="recently__image">
+							<img class="recently__img" src="{{ item.image }}" />
 						</span>
-					</span>
-					<span class="recently__bottom">
-						<span class="recently__profile">
-							<span class="recently__profile-name">{{ item.fromName }}</span>
-							<span class="recently__profile-city">{{ item.fromCity }}</span>
-						</span><span class="recently__profile">
-							<span class="recently__profile-name">{{ item.whomName }}</span>
-							<span class="recently__profile-city">{{ item.whomCity }}</span>
+						<span class="recently__price">{{ item.price }}</span>
+						<span class="recently__name">{{ item.title }}</span>
+						<span class="recently__info">
+							<span class="recently__delivery">
+								Доставка {{ item.delivery }} Р
+							</span><span class="recently__way">
+								В пути {{ item.way }}
+							</span>
 						</span>
-					</span>
-				</a>
-			</li>
-		{%- endfor %}
-	</ul>
+						<span class="recently__bottom">
+							<span class="recently__profile">
+								<span class="recently__profile-name">{{ item.fromName }}</span>
+								<span class="recently__profile-city">{{ item.fromCity }}</span>
+							</span><span class="recently__profile">
+								<span class="recently__profile-name">{{ item.whomName }}</span>
+								<span class="recently__profile-city">{{ item.whomCity }}</span>
+							</span>
+						</span>
+					</a>
+				</li>
+			{%- endfor %}
+		</ul>
+	</div>
 </div>

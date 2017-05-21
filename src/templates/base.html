@@ -21,9 +21,11 @@
           {% block description %}{% endblock %}
         </div>
       </div>
-      <div class="container page__container">
-        {% block content %}{% endblock %}
-      </div>
+      {% block container %}
+        <div class="container page__container">
+          {% block content %}{% endblock %}
+        </div>
+      {% endblock %}
       <div class="page__footer"></div>
     </div>
     {% block footer %}

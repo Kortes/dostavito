@@ -10,6 +10,10 @@ img{
     max-width: 100%;
 }
 
+.desktop-hide{
+    display: none !important;
+}
+
 .page{
     -webkit-font-smoothing: antialiased;
     font: @s-normal/1.35 'MuseoSans', Arial, sans-serif;
@@ -87,4 +91,30 @@ p{
 }
 .clearfix {
     zoom:1; /* Хак для IE 6 и 7 */
+}
+
+.slick-dots{
+    text-align: center;
+    margin-top: 20px;
+
+    li{
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 5px;
+
+        button{
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: @c-point;
+            border: none;
+            display: block;
+            padding: 0;
+        }
+
+        &.slick-active button{
+            background: @c-focus;
+        }
+    }
 }

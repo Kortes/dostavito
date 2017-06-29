@@ -1,16 +1,19 @@
 {% set advantages = [
 	{
 		"image": "/images/payment.png",
+		"imageMobile": "/images/payment-white.png",
 		"title": "Оплата после&nbsp;получения",
 		"text": "Покупатель вносит предоплату банковской картой. Продавцу деньги переводятся только после приёмки товара. Безопасность платежей обеспечивает <a href='#'>Safecrow.</a>"
 	},
 	{
 		"image": "/images/reliability.png",
+		"imageMobile": "/images/reliability-white.png",
 		"title": "Надежная доставка от&nbsp;двери до&nbsp;двери",
 		"text": "Покупки доставляет крупный международный оператор&nbsp;<a href='#'>DPD</a>.<br>Все покупки застрахованы."
 	},
 	{
 		"image": "/images/return.png",
+		"imageMobile": "/images/return-white.png",
 		"title": "Можно отказаться при&nbsp;получении",
 		"text": "Если покупатель отказывается<br>от&nbsp;покупки — стоимость товара возвращается на&nbsp;карту, а&nbsp;товар отправляется обратно продавцу."
 	}
@@ -18,11 +21,13 @@
 
 <div class="advantages">
 	<div class="container page__container">
+		<div class="advantages__head desktop-hide">Преимущества</div>
 		<ul class="advantages__list">
 			{% for item in advantages -%}
 				<li class="advantages__item">
 					<div class="advantages__image">
-						<img src="{{ item.image }}" alt="{{ item.title }}" class="advantages__img" />
+						<img src="{{ item.image }}" alt="{{ item.title }}" class="advantages__img mobile-hide" />
+						<img src="{{ item.imageMobile }}" alt="{{ item.title }}" class="advantages__img desktop-hide" />
 					</div>
 					<div class="advantages__title">{{ item.title }}</div>
 					<div class="advantages__text">{{ item.text }}</div>

@@ -4,8 +4,8 @@
 
 {% set breadcrumbs = [
 	{"link": "/", "title": "Главная"},
-	{"title": "Расчет доставки"},
-	{"title": "Заказ доставки", "disabled": true},
+	{"title": "Расчет<span class='mobile-hide'> доставки</span>"},
+	{"title": "Заказ<span class='mobile-hide'> доставки</span>", "disabled": true},
 	{"title": "Оплата", "disabled": true}
 ]%}
 
@@ -28,10 +28,18 @@
 		<h1 class="panel__title panel__title_left">{{ title }}</h1>
 		<div class="panel__description">Заполните необходимые данные для расчета</div>
 		<div class="panel__row clearfix">
+			<label class="panel__label">Ссылка на объявление</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper">
+					<input type="text" name="link" placeholder="Ссылка на объявление" />
+				</div>
+			</div>
+		</div>
+		<div class="panel__row clearfix">
 			<label class="panel__label">Название товара</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper">
-					<input type="text" name="product" value="Телевизор Sony" />
+					<input type="text" name="product" value="Телевизор Sony" placeholder="Название товара" />
 				</div>
 			</div>
 		</div>
@@ -39,11 +47,12 @@
 			<label class="panel__label">Стоимость</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper panel__wrapper_160">
-					<input type="text" name="price" value="5 000" />
+					<input type="text" name="price" value="5 000" placeholder="Стоимость товара, руб." />
 				</div>
-				<div class="panel__desc">руб.</div>
+				<div class="panel__desc mobile-hide">руб.</div>
 			</div>
 		</div>
+		<div class="desktop-hide panel__group">Доставка</div>
 		<div class="panel__row clearfix">
 			<label class="panel__label">Город продавца</label>
 			<div class="panel__fix">
@@ -68,39 +77,46 @@
 				</div>
 			</div>
 		</div>
+		<div class="desktop-hide panel__group">Товар</div>
 		<div class="panel__row clearfix">
 			<label class="panel__label">Вес товара</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper panel__wrapper_160">
-					<input type="text" name="weight" />
+					<input type="text" name="weight" placeholder="Вес товара, кг" />
 				</div>
-				<div class="panel__desc">кг.</div>
+				<div class="panel__desc mobile-hide">кг.</div>
 			</div>
 		</div>
 		<div class="panel__row clearfix">
 			<label class="panel__label">Габариты</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper panel__wrapper_115">
-					<input type="text" name="length" placeholder="Длина" />
+					<input type="text" name="length" placeholder="Длина, см" />
 				</div>
-				<div class="panel__desc">x</div>
+				<div class="panel__desc mobile-hide">x</div>
 				<div class="panel__wrapper panel__wrapper_115">
-					<input type="text" name="width" placeholder="Ширина" />
+					<input type="text" name="width" placeholder="Ширина, см" />
 				</div>
-				<div class="panel__desc">x</div>
+				<div class="panel__desc mobile-hide">x</div>
 				<div class="panel__wrapper panel__wrapper_115">
-					<input type="text" name="height" placeholder="Высота" />
+					<input type="text" name="height" placeholder="Высота, см" />
 				</div>
-				<div class="panel__desc">см.</div>
+				<div class="panel__desc mobile-hide">см.</div>
 			</div>
 		</div>
-		<div class="panel__controls clearfix">
+		<div class="panel__controls clearfix mobile-hide">
 			<div class="panel__label">
 				<a href="/" class="panel__link">На главную</a>
 			</div>
 			<div class="panel__fix">
 				<input type="submit" name="submit" class="btn" value="Рассчитать" />
 			</div>
+		</div>
+		<div class="desktop-hide panel__controls-mobile">
+			<div class="panel__fix">
+				<input type="submit" name="submit" class="btn" value="Рассчитать доставку" />
+			</div>
+			<a href="/" class="panel__link-mobile">Вернуться на главную</a>
 		</div>
 	</form>
 {% endblock %}

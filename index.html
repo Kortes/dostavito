@@ -16,12 +16,16 @@
         <div class="header__container container">
           
             <div class="header__top clearfix">
-	<a href="/" class="logo">
+	<a href="/" class="logo mobile-hide">
 		<img src="images/logo.png" class="logo__image" />
+	</a>
+	<a href="/" class="logo desktop-hide">
+		<img src="images/logo-white.png" class="logo__image" />
 	</a>
 	<div class="header__menu">
 		
 
+<a href="#" class="menu-burger"><span></span></a>
 <ul class="menu">
 	
 		<li class="menu__item menu__item_active">
@@ -47,7 +51,8 @@
 
 <div class="list">
 	<div class="container page__container">
-		<h1 class="list__title">Покупайте товары на Авито, Из рук в руки<br>и других площадках, не выходя из дома</h1>
+		<h1 class="list__title">Доставляем товары с&nbsp;любых досок объявлений.<br>
+		Защищаем покупателей от&nbsp;мошенничества</h1>
 		<ul class="list__list">
 			
 				<li class="list__item list__item_odd">
@@ -68,7 +73,8 @@
 						</div>
 					
 					
-						<a href="/calc.html" class="list__item-title">Рассчитайте<br>стоимость доставки</a>
+						<a href="/calc.html" class="list__item-title mobile-hide">Рассчитайте<br>стоимость доставки</a>
+						<div class="list__item-title desktop-hide">Рассчитайте<br>стоимость доставки</div>
 					
 					
 				</li>
@@ -84,28 +90,35 @@
 					
 				</li>
 		</ul>
+		<div class="list__bottom desktop-hide">
+			<a href="/calc.html" class="btn">Рассчитать доставку</a>
+		</div>
 	</div>
 </div>
 	
 
 <div class="advantages">
 	<div class="container page__container">
+		<div class="advantages__head desktop-hide">Преимущества</div>
 		<ul class="advantages__list">
 			<li class="advantages__item">
 					<div class="advantages__image">
-						<img src="/images/payment.png" alt="Оплата после&nbsp;получения" class="advantages__img" />
+						<img src="/images/payment.png" alt="Оплата после&nbsp;получения" class="advantages__img mobile-hide" />
+						<img src="/images/payment-white.png" alt="Оплата после&nbsp;получения" class="advantages__img desktop-hide" />
 					</div>
 					<div class="advantages__title">Оплата после&nbsp;получения</div>
 					<div class="advantages__text">Покупатель вносит предоплату банковской картой. Продавцу деньги переводятся только после приёмки товара. Безопасность платежей обеспечивает <a href='#'>Safecrow.</a></div>
 				</li><li class="advantages__item">
 					<div class="advantages__image">
-						<img src="/images/reliability.png" alt="Надежная доставка от&nbsp;двери до&nbsp;двери" class="advantages__img" />
+						<img src="/images/reliability.png" alt="Надежная доставка от&nbsp;двери до&nbsp;двери" class="advantages__img mobile-hide" />
+						<img src="/images/reliability-white.png" alt="Надежная доставка от&nbsp;двери до&nbsp;двери" class="advantages__img desktop-hide" />
 					</div>
 					<div class="advantages__title">Надежная доставка от&nbsp;двери до&nbsp;двери</div>
 					<div class="advantages__text">Покупки доставляет крупный международный оператор&nbsp;<a href='#'>DPD</a>.<br>Все покупки застрахованы.</div>
 				</li><li class="advantages__item">
 					<div class="advantages__image">
-						<img src="/images/return.png" alt="Можно отказаться при&nbsp;получении" class="advantages__img" />
+						<img src="/images/return.png" alt="Можно отказаться при&nbsp;получении" class="advantages__img mobile-hide" />
+						<img src="/images/return-white.png" alt="Можно отказаться при&nbsp;получении" class="advantages__img desktop-hide" />
 					</div>
 					<div class="advantages__title">Можно отказаться при&nbsp;получении</div>
 					<div class="advantages__text">Если покупатель отказывается<br>от&nbsp;покупки — стоимость товара возвращается на&nbsp;карту, а&nbsp;товар отправляется обратно продавцу.</div>
@@ -259,6 +272,7 @@
 			<div class="footer__menu">
 				
 
+<a href="#" class="menu-burger"><span></span></a>
 <ul class="menu">
 	
 		<li class="menu__item menu__item_active">
@@ -289,6 +303,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="ui/fancybox/fancybox.js"></script>
     
+	<script src="ui/slick-1.6.0/slick/slick.min.js"></script>
+
     <script src='js/main.js'></script>
 </body>
 </html>

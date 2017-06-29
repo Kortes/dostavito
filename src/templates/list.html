@@ -18,7 +18,8 @@
 
 <div class="list">
 	<div class="container page__container">
-		<h1 class="list__title">Покупайте товары на Авито, Из рук в руки<br>и других площадках, не выходя из дома</h1>
+		<h1 class="list__title">Доставляем товары с&nbsp;любых досок объявлений.<br>
+		Защищаем покупателей от&nbsp;мошенничества</h1>
 		<ul class="list__list">
 			{% for item in list -%}
 				{% set cls_item = cls.next() %}
@@ -29,7 +30,8 @@
 						</div>
 					{% endif %}
 					{% if item.link %}
-						<a href="{{ item.link }}" class="list__item-title">{{ item.title }}</a>
+						<a href="{{ item.link }}" class="list__item-title mobile-hide">{{ item.title }}</a>
+						<div class="list__item-title desktop-hide">{{ item.title }}</div>
 					{% else %}
 						<div class="list__item-title">{{ item.title }}</div>
 					{% endif %}
@@ -41,5 +43,8 @@
 				</li>
 			{%- endfor %}
 		</ul>
+		<div class="list__bottom desktop-hide">
+			<a href="/calc.html" class="btn">Рассчитать доставку</a>
+		</div>
 	</div>
 </div>

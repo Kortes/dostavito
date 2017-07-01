@@ -55,14 +55,14 @@
 			<li class="breadcrumbs__item
 					   ">
 				
-					<a href="/calc.html" class="breadcrumbs__link">Расчет доставки</a>
+					<a href="/calc.html" class="breadcrumbs__link">Расчет<span class='mobile-hide'> доставки</span></a>
 						   	
 			</li>
 		
 			<li class="breadcrumbs__item
 					   ">
 				
-					Заказ доставки
+					Заказ<span class='mobile-hide'> доставки</span>
 						   	
 			</li>
 		
@@ -83,7 +83,7 @@
 			<label class="panel__label">Ваше имя</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper panel__wrapper_error">
-					<input type="text" name="yourName" />
+					<input type="text" name="yourName" placeholder="Ваше имя" />
 					<div class="panel__error">Текст ошибки</div>
 				</div>
 			</div>
@@ -92,7 +92,7 @@
 			<label class="panel__label">Мобильный телефон</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper panel__wrapper_300 panel__wrapper_warning">
-					<input type="text" name="phone"/>
+					<input type="text" name="phone" placeholder="Мобильный телефон" />
 					<div class="panel__error">Текст предупреждения</div>
 				</div>
 			</div>
@@ -101,16 +101,47 @@
 			<label class="panel__label">Электронная почта</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper panel__wrapper_455 panel__wrapper_success">
-					<input type="text" name="mail" />
+					<input type="text" name="mail" placeholder="Электронная почта" />
 					<div class="panel__error">Текст правильного действия(вдруг понадобится)</div>
 				</div>
 			</div>
 		</div>
+		<div class="desktop-hide panel__group">Доставка</div>
+		<div class="desktop-hide panel__row clearfix">
+			<label class="panel__label">Город</label>
+			<div class="panel__fix">
+				<div class="panel__wrapper select-wrapper">
+					<select class="panel__select select" name="seller">
+						
+							<option value="29">Архангельск</option>
+						
+							<option value="66">Екатеринбург</option>
+						
+							<option value="77">Москва</option>
+						
+							<option value="89">Салехард</option>
+						
+							<option value="11">Сыктывкар</option>
+						
+							<option value="86">Ханты-Мансий</option>
+						
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="desktop-hide panel__row clearfix">
+			<div class="panel__fix">
+				<div class="panel__wrapper">
+					<input type="text" name="address" placeholder="Адрес, куда доставить" />
+				</div>
+			</div>
+		</div>
+		<div class="desktop-hide panel__group">Продавец</div>
 		<div class="panel__row clearfix">
 			<label class="panel__label">Мобильный телефон продавца</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper panel__wrapper_300">
-					<input type="text" name="phoneSeller" />
+					<input type="text" name="phoneSeller" placeholder="Моб. телефон продавца" />
 				</div>
 				<div class="panel__desc panel__desc_bottom">На этот номер придет SMS для подтверждения сделки</div>
 			</div>
@@ -119,16 +150,22 @@
 			<label class="panel__label">&nbsp;</label>
 			<div class="panel__fix">
 				<div class="panel__price">5 340</div>
-				<div class="panel__price-desc">Общая стоимость товаров с доставкой</div>
+				<div class="panel__price-desc">Общая стоимость товаров с&nbsp;доставкой, включая услуги сервиса</div>
 			</div>
 		</div>
-		<div class="panel__controls clearfix">
+		<div class="panel__controls clearfix mobile-hide">
 			<div class="panel__label">
 				<a href="/" class="panel__link">Расчет доставки</a>
 			</div>
 			<div class="panel__fix">
 				<input type="submit" name="submit" class="btn" value="Оплатить" />
 			</div>
+		</div>
+		<div class="desktop-hide panel__controls-mobile">
+			<div class="panel__fix">
+				<input type="submit" name="submit" class="btn" value="Оплатить" />
+			</div>
+			<a href="/" class="panel__link-mobile">Вернуться к расчету заказа</a>
 		</div>
 	</form>
 
@@ -181,6 +218,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="ui/fancybox/fancybox.js"></script>
     
+	<script src="ui/select2/dist/js/select2.min.js"></script>
+
     <script src='js/main.js'></script>
 </body>
 </html>

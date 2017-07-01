@@ -5,7 +5,7 @@
 		font-size: 18px;
 	}
 
-	input[type="text"]{
+	input[type="text"], textarea{
 		padding: 5px 15px !important;
 		border-radius: 3px;
 		box-shadow: none;
@@ -30,6 +30,22 @@
 
 		&:before{
 			display: none;
+		}
+
+		.page_ok &{
+			padding-bottom: 175px !important;
+
+			&:before{
+				display: block;
+				margin: 0 !important;
+				padding: 0;
+				transfotm-origin: bottom center;
+				transform: translateX(-50%);
+				width: 195px;
+				height: 175px;
+				background-size: 100%;
+				background-position: center top;
+			}
 		}
 
 		&__menu{
@@ -156,6 +172,10 @@
 		padding: 0 15px;
 		background: none;
 
+		&__inner{
+			padding: 0;
+		}
+
 		&:before{
 			display: none;
 		}
@@ -176,7 +196,124 @@
 
 		&__row{
 			padding: 0;
+
+			&_total{
+				border: none;
+				background: linear-gradient(fade(#ffd500, 20%), fade(#ff8500, 20%));
+				border-radius: 5px;
+				text-align: center;
+				padding: 15px;
+				margin-top: 30px;
+			}
 		}
+
+		&__error{
+			font-size: 14px;
+		}
+
+		&__desc{
+			font-size: 14px;
+			font-weight: 300;
+
+			&_bottom{
+				padding-top: 0;
+			}
+		}
+
+		&__price{
+			font-size: 30px;
+			font-weight: 700;
+
+			&-desc{
+				font-size: 14px;
+				font-weight: 300;
+			}
+		}
+
+		&__title{
+			text-align: left;
+
+			&_left{
+				margin-bottom: 20px;
+			}
+
+			&:first-child{
+				padding-top: 20px;
+			}
+		}
+
+		&__form h1:first-child{
+			padding-top: 20px;
+		}
+
+		&__info{
+			padding: 0;
+
+			&:before{
+				display: none;
+			}
+
+			&-cell{
+				display: block;
+				width: auto;
+				padding: 20px 0;
+
+				&:first-child{
+					margin: 0 -15px;
+					padding: 20px 15px;
+					background: @c-blue-panel;
+				}
+			}
+
+			&-title{
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: 500;
+				letter-spacing: 3px;
+			}
+
+			&-list{
+				font-size: 16px;
+			}
+
+			&-value{
+				font-weight: 500;
+			}
+		}
+
+		&__controls-item{
+			display: inline-block;
+			width: 50%;
+			box-sizing: border-box;
+			margin: 0;
+			padding: 15px 0 0 5px;
+
+			&:first-child{
+				padding: 15px 5px 0 0;
+			}
+
+			.btn{
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 1;
+				padding: 10px 20px;
+				white-space: normal;
+			}
+		}
+
+		&__controls-desc{
+			font-size: 13px;
+		}
+
+		&__controls-mobile{
+			padding: 10px 0 !important;
+			background: none;
+			margin: 0 !important;
+		}
+	}
+
+	.text{
+		padding-top: 0;
 	}
 
 	.menu-burger{
@@ -311,7 +448,10 @@
 	.btn{
 		padding: 12px 30px 10px;
 		font-size: 20px;
-		width: 100%;
+
+		.panel__form &{
+			width: 100%;
+		}
 	}
 
 	.advantages{
@@ -445,6 +585,95 @@
 					}
 				}
 			}
+		}
+	}
+
+	.calc-info{
+		padding-bottom: 30px;
+
+		&__line{
+			padding-top: 25px;
+
+			&:first-child{
+				background: @c-blue-panel;
+				margin: 0 -15px;
+				padding: 15px;
+			}
+		}
+
+		&__title{
+			float:none;
+			padding: 5px 0 10px;
+			margin: 0;
+			width: auto;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 500;
+			letter-spacing: 3px;
+
+			&:before{
+				left: auto;
+				right: 0;
+				transform-origin: right top;
+				transform: scale(0.5);
+			}
+		}
+
+		&__way{
+			font-size: 18px;
+			font-weight: 500;
+			margin-bottom: 5px;
+		}
+
+		&__desc{
+			font-size: 16px;
+			margin-right: 20px;
+		}
+
+		&__col{
+			padding: 5px 0 0 0;
+			text-align: right;
+
+			&:first-child{
+				padding-right: 10px;
+				text-align: left;
+			}
+
+			&:last-child{
+				min-width: 100%;
+				text-align: left;
+			}
+
+			&-title{
+				display: none;
+			}
+
+			&-value{
+				font-size: 16px;
+			}
+
+			&-mobile{
+				display: inline-block !important;
+				font-weight: 100;
+				padding-left: 15px;
+
+				&:first-child{
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	.info{
+		margin: 30px 15px 45px;
+		width: auto;
+		background: linear-gradient(fade(#ffd500, 20%), fade(#ff8500, 20%));
+		border-radius: 5px;
+		padding: 15px;
+
+		&__title{
+			font-size: 20px;
+			line-height: 1.2;
 		}
 	}
 }

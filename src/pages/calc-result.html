@@ -4,8 +4,8 @@
 
 {% set breadcrumbs = [
 	{"link": "/", "title": "Главная"},
-	{"title": "Расчет доставки"},
-	{"title": "Заказ доставки", "disabled": true},
+	{"title": "Расчет<span class='mobile-hide'> доставки</span>"},
+	{"title": "Заказ<span class='mobile-hide'> доставки</span>", "disabled": true},
 	{"title": "Оплата", "disabled": true}
 ]%}
 
@@ -18,13 +18,19 @@
 		{% include 'breadcrumbs.html' %}
 		<h1 class="panel__title panel__title_left">{{ title }}</h1>
 		{% include 'calc-info.html' %}
-		<div class="panel__controls clearfix">
+		<div class="panel__controls clearfix mobile-hide">
 			<div class="panel__label">
 				<a href="/" class="panel__link panel__link_multi">Изменить параметры</a>
 			</div>
 			<div class="panel__fix">
 				<input type="submit" name="submit" class="btn" value="Заказать доставку" />
 			</div>
+		</div>
+		<div class="desktop-hide panel__controls-mobile">
+			<div class="panel__fix">
+				<input type="submit" name="submit" class="btn" value="Заказать доставку" />
+			</div>
+			<a href="/" class="panel__link-mobile">Изменить параметры</a>
 		</div>
 	</form>
 {% endblock %}

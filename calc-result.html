@@ -55,14 +55,14 @@
 			<li class="breadcrumbs__item
 					   ">
 				
-					Расчет доставки
+					Расчет<span class='mobile-hide'> доставки</span>
 						   	
 			</li>
 		
 			<li class="breadcrumbs__item
 					   breadcrumbs__item_disabled">
 				
-					Заказ доставки
+					Заказ<span class='mobile-hide'> доставки</span>
 						   	
 			</li>
 		
@@ -107,18 +107,27 @@
 			</div>
 			<div class="calc-info__col">
 				<div class="calc-info__col-title">Вес и габариты</div>
-				<div class="calc-info__col-value"> 5 кг. 70x30x50 см.</div>
+				<div class="calc-info__col-value">
+					<span class="desktop-hide calc-info__col-mobile">Вес: </span>5 кг.
+					<span class="desktop-hide calc-info__col-mobile">Габариты: </span>70x30x50 см.
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-		<div class="panel__controls clearfix">
+		<div class="panel__controls clearfix mobile-hide">
 			<div class="panel__label">
 				<a href="/" class="panel__link panel__link_multi">Изменить параметры</a>
 			</div>
 			<div class="panel__fix">
 				<input type="submit" name="submit" class="btn" value="Заказать доставку" />
 			</div>
+		</div>
+		<div class="desktop-hide panel__controls-mobile">
+			<div class="panel__fix">
+				<input type="submit" name="submit" class="btn" value="Заказать доставку" />
+			</div>
+			<a href="/" class="panel__link-mobile">Изменить параметры</a>
 		</div>
 	</form>
 

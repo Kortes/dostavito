@@ -18,19 +18,21 @@
 
 <div class="list">
 	<div class="container page__container">
-		<h1 class="list__title">Доставляем товары с&nbsp;любых досок объявлений.<br>
+		<h1 class="list__title">Доставляем товары с&nbsp;любых досок&nbsp;объявлений.<br>
 		Защищаем покупателей от&nbsp;мошенничества</h1>
 		<ul class="list__list">
 			{% for item in list -%}
 				{% set cls_item = cls.next() %}
 				<li class="list__item list__item_{{ cls_item }}">
 					{% if cls_item != "odd" %}
-						<div class="list__image">
+						<div class="list__image {% if cls_item == even %}list__item-top{% endif %}">
 							<img src="{{ item.image }}" class="list__img" alt="{{ item.title }}" />
 						</div>
 					{% endif %}
 					{% if item.link %}
-						<a href="{{ item.link }}" class="list__item-title mobile-hide">{{ item.title }}</a>
+						<div class="list__item__bottom mobile-hide">
+							<a href="{{ item.link }}" class="btn">Рассчитайте доставку</a>
+						</div>
 						<div class="list__item-title desktop-hide">{{ item.title }}</div>
 					{% else %}
 						<div class="list__item-title">{{ item.title }}</div>

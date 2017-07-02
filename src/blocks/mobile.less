@@ -5,7 +5,7 @@
 		font-size: 18px;
 	}
 
-	input[type="text"], textarea{
+	input[type="text"], textarea, .inp{
 		padding: 5px 15px !important;
 		border-radius: 3px;
 		box-shadow: none;
@@ -185,7 +185,7 @@
 		}
 
 		&__description{
-			margin-bottom: 20px;
+			display: none;
 		}
 
 		&__wrapper{
@@ -393,7 +393,7 @@
 	}
 
 	.list{
-		background: url("/images/list-mobile.png") no-repeat -3px bottom;
+		background: url("../images/list-mobile.png") no-repeat -3px bottom;
 
 		&__title{
 			font-size: @s-normal;
@@ -430,7 +430,7 @@
 					height: 75px;
 					left: 0;
 					margin: 0 0 0 -15px;
-					background: url("/images/list-arrow-mobile.png") no-repeat center;
+					background: url("../images/list-arrow-mobile.png") no-repeat center;
 				}
 			}
 
@@ -535,8 +535,8 @@
 
 		&__item{
 			display: block;
-			width: auto;
-			min-width: 260px;
+			min-width: 240px;
+			width: 260px;
 			padding: 0 10px;
 			box-sizing: content-box;
 		}

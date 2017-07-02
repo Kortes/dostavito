@@ -18,18 +18,20 @@ $(document).ready(function() {
 		if ($('.recently__list').length > 0) {
 			$('.recently__list').slick({
 				dots: true,
-				infinite: true,
+				infinite: false,
 				arrows: false,
+				slidesToShow: 4,
+  				slidesToScroll: 4,
 				responsive: [
 					{
-				      breakpoint: 768,
+					  breakpoint: 760,
 				      settings: {
 				        slidesToShow: 2,
 				        slidesToScroll: 2
 				      }
-				    },
+					},
 				    {
-				      breakpoint: 330,
+				      breakpoint: 560,
 				      settings: {
 				        slidesToShow: 1,
 				        slidesToScroll: 1

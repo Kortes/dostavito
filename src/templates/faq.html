@@ -17,7 +17,7 @@
 	]}
 ]%}
 
-<div class="faq">
+<div class="faq mobile-hide">
 	{% for cell in faq %}
 		<div class="faq__cell">
 			<div class="faq__title h1 faq__title_{{ cell.type }}">{{ cell.title }}</div>
@@ -30,5 +30,19 @@
 				{% endfor %}
 			</ul>
 		</div>
+	{% endfor %}
+</div>
+<div class="faq desktop-hide">
+	<div class="faq__title h1">{{ faq[0].title }} {{ faq[1].title }}</div>
+	{% for row in faq[0].list %}
+		<ul class="faq__list">
+			{% set index = loop.index0 %}
+			{% for cell in faq %}
+				<li class="faq__item faq__item_{{ cell.type }}">
+					<div class="faq__question">{{ cell.list[index].question }}</div>
+					<div class="faq__answer">{{ cell.list[index].answer }}</div>
+				</li>
+			{% endfor %}
+		</ul>
 	{% endfor %}
 </div>

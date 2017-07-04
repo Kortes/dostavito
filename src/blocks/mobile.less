@@ -678,4 +678,199 @@
 			line-height: 1.2;
 		}
 	}
+
+	.work{
+		padding: 0;
+
+		&__cart{
+			float: none;
+			width: auto;
+			padding: 0;
+
+			&:after{
+				display: none;
+			}
+
+			&:before{
+				position: static;
+				display: block !important;
+				width: auto;
+				height: auto;
+				padding: 30px 15px 0;
+				font-size: 12px;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
+
+			&_type_buyer:before{
+				content: "Покупатель";
+				background: @c-white;
+			}
+
+			&_type_seller:before{
+				content: "Продавец";
+				background: @c-focus;
+				color: @c-white;
+			}
+
+			&_type_buyer + &_type_buyer:before{
+				display: none !important;
+			}
+
+			&_type_seller + &_type_seller:before{
+				display: none !important;
+			}
+
+			&:nth-child(1){
+				.work__image{
+					top: 15px;
+				}
+
+				.work__img{
+					max-height: 90px;
+				}
+
+			}
+
+			&:nth-child(4){
+				.work__image{
+					top: 45px;
+				}
+
+				.work__img{
+					max-height: 130px;
+				}
+
+			}
+
+			&:nth-child(5){
+				.work__image{
+					top: 120px;
+				}
+
+				.work__img{
+					max-height: none;
+				}
+
+			}
+
+			&:nth-child(6){
+				.work__image{
+					top: -20px
+				}
+
+				.work__img{
+					max-height: 70px;
+				}
+
+			}
+
+			&:nth-child(7){
+				.work__image{
+					top: 25px;
+				}
+			}
+
+			&:nth-child(8){
+				.work__img{
+					max-height: 70px;
+				}
+			}
+		}
+
+		&__inner{
+			padding: 15px;
+			margin: 0;
+
+			&:before,
+			&:after{
+				display: none;
+			}
+		}
+
+		&__cart_type_buyer &__inner{
+			background: @c-white;
+		}
+
+		&__cart_type_seller &__inner{
+			background: @c-focus;
+			color: @c-white;
+		}
+
+		&__image{
+			width: 90px;
+			height: 80px;
+			bottom: auto;
+			top: 5px;
+		}
+
+		&__img{
+			max-height: 80px;
+		}
+
+		&__body{
+			&-title{
+				font-size: 20px;
+				font-weight: 500;
+				padding: 0 70px 0 20px;
+			}
+
+			&-text{
+				ul li{
+					font-size: 15px;
+				}
+
+				p{
+					margin-right: 65px;
+				}
+			}
+		}
+
+		&__index{
+			font-size: 20px;
+			font-weight: 300;
+			left: 15px;
+			top: 17px;
+		}
+
+		&__cart_type_seller &__index{
+			opacity: 0.5;
+		}
+	}
+
+	.faq{
+		background: @c-faq-mobile;
+		padding: 40px 15px 10px;
+
+		&__title{
+			margin-bottom: 25px;
+		}
+
+		&__item{
+			&:before{
+				font-size: 12px;
+				font-weight: 500;
+				padding: 0 10px;
+				line-height: 22px;
+				border-radius: 3px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				box-shadow: inset 0 0 0 1px @c-focus;
+				display: inline-block;
+				margin-bottom: 5px;
+			}
+
+			&_buyer:before{
+				content: "Покупатель";
+				color: @c-focus;
+			}
+
+			&_seller:before{
+				content: "Продавец";
+				background: @c-focus;
+				color: @c-white;
+			}
+		}
+	}
 }

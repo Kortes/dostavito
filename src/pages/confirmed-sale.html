@@ -12,7 +12,13 @@
 		<div class="text">
 			<p>В течение 3-х часов с вами свяжется курьер и обсудит удобное время, чтобы забрать товар. После доставки товара покупателю, мы переведем стоимость товара на указанную карту.</p>
 
-			<p>Если у вас остались вопросы — напишите нам на <a href="mailto:inbox@dostavito.ru">inbox@dostavito.ru</a></p>
+			<p>Если у вас остались вопросы — напишите нам на 
+				{% if ktb %}
+					<a href="mailto:dostavka@kidtobaby.com">dostavka@kidtobaby.com</a>
+				{% else %}
+					<a href="mailto:inbox@dostavito.ru">inbox@dostavito.ru</a>
+				{% endif %}
+			</p>
 		</div>
 	</div>
 {% endblock %}

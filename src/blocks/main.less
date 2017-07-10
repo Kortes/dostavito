@@ -10,7 +10,8 @@ img{
     max-width: 100%;
 }
 
-.desktop-hide{
+.desktop-hide,
+.page_ktb .ktb-hide{
     display: none !important;
 }
 
@@ -27,10 +28,20 @@ img{
     &__footer{
         height: 120px;
     }
+
+    &_ktb{
+        font: 16px/1.35 'Open Sans', Arial, sans-serif;
+        color: @ktb-text;
+        font-weight: 400;
+    }
 }
 
 input, textarea, keygen, select, button {
-    font: @s-middle/30px 'MuseoSans', Arial, sans-serif;
+    font: 18px/30px 'MuseoSans', Arial, sans-serif;
+
+    .page_ktb &{
+        font-family: 'Open Sans', Arial, sans-serif;
+    }
 }
 
 .container{
@@ -57,16 +68,36 @@ a{
     &:hover{
         color: @c-link-hover;
     }
+
+    .page_ktb &{
+        color: @ktb-link;
+
+        &:visited{
+            color:@ktb-link;
+        }
+
+        &:hover{
+            color: lighten(@ktb-link, 20%);
+        }
+    }
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{
     font-weight: 500;
     margin-bottom: 1em;
+
+    .page_ktb &{
+        font-weight: 400;
+    }
 }
 
 h1, .h1{
     font-size: @s-big;
+
+    .page_ktb &{
+        font-size: 40px;
+    }
 }
 
 h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{

@@ -8,6 +8,10 @@
 		font-size: @s-middle;
 		font-weight: 500;
 		margin-bottom: 20px;
+
+		.page_ktb &{
+			font-weight: 600;
+		}
 	}
 
 	&__list li{
@@ -19,6 +23,25 @@
 			position: absolute;
 			left: 0;
 			top: 0;
+		}
+	}
+
+	.page_ktb &{
+		background: @ktb-info;
+		width: 940px;
+		padding: 30px 95px;
+		box-sizing: border-box;
+
+		.info__list{
+			list-style: disc;
+
+			li{
+				padding-left: 0;
+				
+				&:before{
+					display: none;
+				}
+			}
 		}
 	}
 }

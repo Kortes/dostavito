@@ -38,12 +38,20 @@
 		line-height: 1;
 		font-weight: 300;
 		padding: 25px 0 15px;
+
+		.page_ktb &{
+			font-weight: 400;
+		}
 	}
 
 	&__text{
 		font-size: @s-middle;
 		line-height: 1.2;
 		font-weight: 100;
+
+		.page_ktb &, .page_ktb & a{
+			font-weight: 300;
+		}
 
 		a{
 			font-weight: 300;
@@ -54,5 +62,9 @@
 		color: @c-white;
 		font-size: 30px;
 		font-weight: 500;
+
+		.page_ktb &{
+			font-weight: 600;
+		}
 	}
 }

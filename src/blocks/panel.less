@@ -9,6 +9,38 @@
 	box-sizing: border-box;
 	position: relative;
 
+	.page_ktb &{
+		background: @ktb-panel;
+
+		&:before{
+			display: none;
+		}
+
+		.panel__controls{
+			background: @ktb-panel-bottom;
+		}
+
+		.panel__description{
+			font-size: 16px;
+			color: fade(@ktb-text, 75%);
+			margin-top: 15px;
+		}
+
+		.panel__wrapper{
+			input[type="text"]{
+				padding: 10px;
+				color: @ktb-text;
+				box-shadow: none;
+				border-color: @ktb-border;
+			}
+		}
+
+		.panel__label,
+		.panel__desc{
+			font-size: 18px;
+		}
+	}
+
 	&:before{
 		content: "";
 		position: absolute;
@@ -44,11 +76,19 @@
 		&_warning{
 			color: @c-warning;
 			font-weight: 500;
+
+			.page_ktb &{
+				font-weight: 600;
+			}
 		}
 
 		&_error{
 			color: @c-error;
 			font-weight: 500;
+
+			.page_ktb &{
+				font-weight: 600;
+			}
 		}
 	}
 
@@ -170,6 +210,10 @@
 		line-height: 1.2em;
 		font-weight: 500;
 
+		.page_ktb &{
+			font-weight: 600;
+		}
+
 		.panel__wrapper_warning &{
 			color: @c-warning;
 			display: block;
@@ -207,6 +251,10 @@
 			line-height: 18px;
 			margin-top: 10px;
 			max-width: 315px;
+
+			.page_ktb &{
+				max-width: 285px;
+			}
 		}
 	}
 
@@ -216,6 +264,12 @@
 		display: inline-block;
 		line-height: 1;
 
+		.page_ktb &{
+			font-size: 16px;
+			padding-left: 30px;
+			padding-top: 0;
+		}
+
 		&:before{
 			content: "";
 			width: 24px;
@@ -224,6 +278,12 @@
 			left: 0;
 			top: 13px;
 			background: url(../images/panel-arrow.png) no-repeat top center;
+
+			.page_ktb &{
+				top: 2px;
+				height: 12px;
+				background: url(../images/panel-arrow-ktb.png) no-repeat top center;
+			}
 		}
 
 		&_multi{
@@ -252,6 +312,10 @@
 		white-space: nowrap;
 		font-size: @s-big;
 		font-weight: 500;
+
+		.page_ktb &{
+			font-weight: 600;
+		}
 
 		&:after{
 			content: " ₽";
@@ -289,6 +353,10 @@
 			font-size: @s-middle;
 			font-weight: 500;
 			margin-bottom: 15px;
+
+			.page_ktb &{
+				font-weight: 600;
+			}
 		}
 
 		&-list{
@@ -309,6 +377,10 @@
 		&-value{
 			display: table-cell;
 			padding-bottom: 10px;
+
+			.page_ktb &{
+				font-weight: 600;
+			}
 		}
 	}
 
@@ -322,6 +394,10 @@
 		font-size: 12px;
 		font-weight: 500;
 		letter-spacing: 3px;
+
+		.page_ktb &{
+			font-weight: 600;
+		}
 	}
 
 	&__information{

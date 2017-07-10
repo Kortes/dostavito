@@ -39,9 +39,9 @@
 			</div>
 		</div>
 		<div class="panel__row clearfix">
-			<label class="panel__label">Мобильный телефон</label>
+			<label class="panel__label">Моб{% if not ktb %}ильный {% else %}.{% endif%}телефон</label>
 			<div class="panel__fix">
-				<div class="panel__wrapper panel__wrapper_300 panel__wrapper_warning">
+				<div class="panel__wrapper {% if not ktb %}panel__wrapper_300{% endif %} panel__wrapper_warning">
 					<input type="text" name="phone" placeholder="Мобильный телефон" />
 					<div class="panel__error">Текст предупреждения</div>
 				</div>
@@ -50,7 +50,7 @@
 		<div class="panel__row clearfix">
 			<label class="panel__label">Электронная почта</label>
 			<div class="panel__fix">
-				<div class="panel__wrapper panel__wrapper_455 panel__wrapper_success">
+				<div class="panel__wrapper {% if not ktb %}panel__wrapper_455{% endif %} panel__wrapper_success">
 					<input type="text" name="mail" placeholder="Электронная почта" />
 					<div class="panel__error">Текст правильного действия(вдруг понадобится)</div>
 				</div>
@@ -78,9 +78,9 @@
 		</div>
 		<div class="desktop-hide panel__group">Продавец</div>
 		<div class="panel__row clearfix">
-			<label class="panel__label">Мобильный телефон продавца</label>
+			<label class="panel__label">Моб{% if not ktb %}ильный {% else %}.{% endif%}телефон продавца</label>
 			<div class="panel__fix">
-				<div class="panel__wrapper panel__wrapper_300">
+				<div class="panel__wrapper {% if not ktb %}panel__wrapper_300{% endif %}">
 					<input type="text" name="phoneSeller" placeholder="Моб. телефон продавца" />
 				</div>
 				<div class="panel__desc panel__desc_bottom">На этот номер придет SMS для подтверждения сделки</div>

@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     
-      <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> -->
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
       
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;subset=cyrillic" rel="stylesheet">
       
@@ -94,7 +94,7 @@
 			<label class="panel__label">Название товара</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper">
-					<input type="text" name="product" value="Телевизор Sony" placeholder="Название товара" />
+					<input type="text" name="product" value="Телевизор Sony" placeholder="Название товара" class="inp_placeholder_less" />
 				</div>
 			</div>
 		</div>
@@ -102,7 +102,7 @@
 			<label class="panel__label">Стоимость</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper panel__wrapper_160">
-					<input type="text" name="price" value="5 000" placeholder="Стоимость товара, руб." />
+					<input type="text" name="price" value="5 000" placeholder="Стоимость товара, руб." class="inp_placeholder_less" />
 				</div>
 				<div class="panel__desc mobile-hide">руб.</div>
 			</div>
@@ -112,7 +112,7 @@
 			<label class="panel__label">Город продавца</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper select-wrapper">
-					<select class="panel__select select" name="seller">
+					<!-- <select class="panel__select select" name="seller">
 						
 							<option value="29">Архангельск</option>
 						
@@ -126,7 +126,8 @@
 						
 							<option value="86">Ханты-Мансий</option>
 						
-					</select>
+					</select> -->
+					<input type="text" name="seller" class="inp_type_city" placeholder="Города продавца" />
 				</div>
 			</div>
 		</div>
@@ -134,7 +135,7 @@
 			<label class="panel__label">Ваш город</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper select-wrapper">
-					<select class="panel__select select" name="yourcity">
+					<!-- <select class="panel__select select" name="yourcity">
 						
 							<option value="29">Архангельск</option>
 						
@@ -148,7 +149,8 @@
 						
 							<option value="86">Ханты-Мансий</option>
 						
-					</select>
+					</select> -->
+					<input type="text" name="seller" class="inp_type_city" placeholder="Ваш город" />
 				</div>
 			</div>
 		</div>
@@ -157,7 +159,7 @@
 			<label class="panel__label">Вес товара</label>
 			<div class="panel__fix">
 				<div class="panel__wrapper panel__wrapper_160">
-					<input type="text" name="weight" placeholder="Вес товара, кг" />
+					<input type="text" name="weight" placeholder="Вес товара, кг" class="inp_placeholder_less" />
 				</div>
 				<div class="panel__desc mobile-hide">кг.</div>
 			</div>

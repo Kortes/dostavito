@@ -1,4 +1,22 @@
-@media (max-width: 992px) {}
+@media (min-width: 769px) {
+	.inp_placeholder_less{
+		&::-webkit-input-placeholder {
+	        color: transparent;
+		}
+
+		&:-moz-placeholder { 
+		    color: transparent;
+		}
+
+		&::-moz-placeholder {
+		    color: transparent;
+		}
+
+		&:-ms-input-placeholder {  
+		    color: transparent;
+		}
+	}
+}
 
 @media (max-width: 768px) {
 	h1, .h1{
@@ -88,12 +106,13 @@
 			transition: transform .2s;
 
 			.page_ktb &{
-				background: @ktb-bg-dark;
+				background: @ktb-panel;
 			}
 
 			&__item{
 				display: block;
 				margin: 0;
+				font-size: 19px;
 			}
 
 			&__link{
@@ -524,10 +543,12 @@
 	.btn{
 		padding: 12px 30px 10px;
 		font-size: 20px;
+		height: 52px;
 
 		.page_ktb &{
 			padding: 10px 30px;
 			font-size: 16px;
+			height: 50px;
 		}
 
 		.panel__form &{

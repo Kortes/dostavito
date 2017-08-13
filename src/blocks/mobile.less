@@ -112,13 +112,20 @@
 			&__item{
 				display: block;
 				margin: 0;
-				font-size: 19px;
+				font-size: 18px;
 			}
 
 			&__link{
 				display: block;
-				padding: 10px;
+				padding: 7px 15px;
+				text-align: left;
 				color: @c-white;
+				border-top: 1px solid fade(@c-white, 50%);
+
+				.page_ktb &{
+					border-top: none;
+					border-bottom: 1px solid @ktb-border;
+				}
 			}
 		}
 
@@ -441,7 +448,7 @@
 		}
 
 		&:before{
-			top: 4px;
+			top: 2px;
 
 			.page_ktb &{
 				top: 7px;
@@ -462,7 +469,11 @@
 			}
 
 			&:before{
-				transform: rotate(45deg);
+				transform: translateY(2px) rotate(45deg);
+
+				.page_ktb &{
+					transform: translateY(-1px) rotate(45deg);
+				}
 			}
 
 			&:after{
